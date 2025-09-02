@@ -83,3 +83,15 @@ body { font-family: Arial, sans-serif; line-height: 1.6; background: #f9f9f9; co
     width: 250px;  /* fixed width for uniform images */
     height: auto;
 }
+.map-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  height: 450px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
