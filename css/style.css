@@ -44,3 +44,42 @@ body { font-family: Arial, sans-serif; line-height: 1.6; background: #f9f9f9; co
 @media (max-width: 768px) {
   .highlight-grid, .facility-grid { grid-template-columns: 1fr; }
 }
+/* ===== Container for all page content ===== */
+.container {
+    max-width: 1000px;  /* limits content width */
+    margin: 0 auto;     /* centers horizontally */
+    text-align: center; /* centers text and headings */
+    padding: 20px;
+}
+
+/* ===== Images: responsive, proportional, centered ===== */
+.container img {
+    max-width: 100%;    /* image scales to container width */
+    height: auto;       /* maintains aspect ratio */
+    display: block;     /* allows centering with margin */
+    margin: 10px auto;  /* spacing above/below and centered */
+}
+
+/* ===== Headings and paragraphs spacing ===== */
+.container h1, .container h2, .container h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.container p {
+    margin-bottom: 20px;
+    line-height: 1.6;  /* improves readability */
+}
+
+/* ===== Optional: gallery layout for multiple images ===== */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;           /* allows multiple rows */
+    justify-content: center;   /* centers all images */
+    gap: 20px;                 /* space between images */
+}
+
+.gallery img {
+    width: 250px;  /* fixed width for uniform images */
+    height: auto;
+}
