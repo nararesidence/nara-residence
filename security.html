@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security | NARA Residence</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #D8CBB5;
+      color: #7A6F5F;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    a:hover { color: #A8A29A; }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    header img.logo {
+      height: 180px;
+      margin-right: 22px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    header h1 span.nara {
+      font-family: serif;
+      color: #A8A29A;
+    }
+
+    header h1 span.residence {
+      font-family: 'Open Sans', sans-serif;
+      color: #A8A29A;
+      font-weight: 400;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      background: #f5f0e6;
+      padding: 12px 0;
+      font-weight: 600;
+      font-size: 120%;
+    }
+
+    nav a {
+      text-transform: uppercase;
+      color: #7A6F5F;
+    }
+    nav a:hover {
+      color: #A8A29A;
+    }
+
+    /* Main */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    section { margin-bottom: 60px; }
+
+    h2 {
+      text-align: center;
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #7A6F5F;
+    }
+
+    p.description {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      color: #555;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    /* Photo grid */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .photo-slot {
+      background: #ffffff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .photo-slot img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* Footer */
+    footer {
+      background: #7A6F5F;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #ffffff;
+      font-weight: bold;
+    }
+    footer a:hover {
+      color: #D8CBB5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="images/nara_logo.png" alt="NARA Residence Logo" class="logo">
+    <h1><span class="nara">NARA</span> <span class="residence">Residence</span></h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="facilities.html">FACILITIES</a>
+    <a href="security.html">SECURITY</a>
+    <a href="room.html">ROOM</a>
+    <a href="contact.html">CONTACT US</a>
+  </nav>
+
+  <!-- Main -->
+  <main>
+    <!-- Overview -->
+    <section id="overview">
+      <h2>Overview</h2>
+      <p class="description">
+        At NARA Residence, your safety is our highest priority.  
+        We combine advanced technology with modern design for peace of mind.  
+        Secure living means freedom to enjoy every day with confidence.
+      </p>
+    </section>
+
+    <!-- CCTV -->
+    <section id="cctv">
+      <h2>CCTV (24/7 Surveillance)</h2>
+      <p class="description">Our 24/7 surveillance system monitors every corner with clarity and reliability, keeping residents secure around the clock.</p>
+      <div class="photo-grid">
+        <div class="photo-slot"><img src="images/cctv1.jpg" alt="CCTV Camera 1"></div>
+        <div class="photo-slot"><img src="images/cctv2.jpg" alt="CCTV Camera 2"></div>
+        <div class="photo-slot"><img src="images/cctv3.jpg" alt="CCTV Camera 3"></div>
+      </div>
+    </section>
+
+    <!-- Keycard Access -->
+    <section id="keycard">
+      <h2>Restricted Keycard Access</h2>
+      <p class="description">Residents access only authorized areas with personal keycards, ensuring privacy and controlled entry.</p>
+      <div class="photo-grid">
+        <div class="photo-slot"><img src="images/keycard1.jpg" alt="Keycard Access 1"></div>
+        <div class="photo-slot"><img src="images/keycard2.jpg" alt="Keycard Access 2"></div>
+      </div>
+    </section>
+
+    <!-- Safety Regulations -->
+    <section id="safety">
+      <h2>Safety Regulations</h2>
+      <p class="description">Certified fire exits, safety signage, and clear evacuation plans guarantee readiness and protection for all residents.</p>
+      <div class="photo-grid">
+        <div class="photo-slot"><img src="images/safety1.jpg" alt="Fire Exit"></div>
+        <div class="photo-slot"><img src="images/safety2.jpg" alt="Safety Signage"></div>
+        <div class="photo-slot"><img src="images/safety3.jpg" alt="Evacuation Plan"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 NARA Residence | 
+      <a href="index.html">Home</a> | 
+      <a href="contact.html">Contact Us</a> | 
+      <a href="facilities.html">Facilities</a> | 
+      <a href="room.html">Room</a>
+    </p>
+  </footer>
+
+</body>
+</html>

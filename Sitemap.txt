@@ -1,0 +1,99 @@
+NARA Residence (root)							
+├─ Home  (/ or /index.html)
+│  ├─ Hero (big photo slot 1477×1108)
+│  ├─ Sub-hero (Modern Gym link)
+│  ├─ Why choose Nara residence?
+│  ├─ Feature cards
+│  │   ├─ Safety Regulations  → /security.html#safety
+│  │   ├─ 24/7 Surveillance   → /security.html#cctv
+│  │   └─ Ample Parking       → /facilities.html#parking
+│  └─ Footer (quick links + contact snippet)
+│
+├─ Facilities  (/facilities.html)
+│  ├─ Intro/overview
+│  ├─ Gym details                 (#gym)
+│  ├─ Parking details             (#parking)
+│  ├─ Elevator / lobby / greenery (#amenities)
+│  └─ CTA: View Rooms → /rooms.html
+│
+├─ Security  (/security.html)
+│  ├─ Overview
+│  ├─ CCTV (24/7 Surveillance)           (#cctv)
+│  ├─ Restricted Keycard Access          (#keycard)
+│  ├─ Safety Regulations                  (#safety)
+│  └─ CTA: Contact Us → /contact.html
+│
+├─ Rooms  (/rooms.html)
+│  ├─ Room types / layouts
+│  ├─ In-room features (AC, balcony, Wi-Fi)
+│  ├─ Gallery / price note (if any)
+│  └─ CTA: Book/Enquire → /contact.html
+│
+└─ Contact Us  (/contact.html)
+   ├─ Google Map (iframe)
+   ├─ Telephone: 086-5595142
+   ├─ Line ID: https://page.line.me/nara24
+   └─ Contact form / message block (optional)
+
+
+File and URL struture
+/ (project root)
+├─ index.html
+├─ facilities.html
+├─ security.html
+├─ rooms.html
+├─ contact.html
+├─ style.css
+└─ /images
+   ├─ logo.png
+   ├─ hero-placeholder.jpg
+   ├─ subhero-placeholder.jpg
+   ├─ safety-placeholder.jpg
+   ├─ cctv-placeholder.jpg
+   ├─ parking-placeholder.jpg
+   └─ gym-placeholder.jpg
+
+
+Navigation & cross-links
+
+Global nav (header & footer): Home · Facilities · Security · Rooms · Contact Us
+
+Home feature links:
+
+Modern Gym → /facilities.html#gym
+
+Safety Regulations → /security.html#safety
+
+24/7 Surveillance System → /security.html#cctv
+
+Ample Parking → /facilities.html#parking
+
+Breadcrumbs (optional)
+
+Home
+
+Home › Facilities
+
+Home › Security
+
+Home › Rooms
+
+Home › Contact Us
+
+SEO slugs & metadata (recommended)
+
+/facilities.html — title: “Facilities | NARA Residence”
+
+/security.html — title: “Security: CCTV & Keycard Access | NARA Residence”
+
+/rooms.html — title: “Rooms & Layouts | NARA Residence”
+
+/contact.html — title: “Contact Us | NARA Residence”
+
+Meta description per page (1–2 sentences), Open Graph image = hero.
+
+CTAs (calls-to-action)
+
+Facilities / Security → “View Rooms” or “Contact Us”
+
+Rooms → “Enquire Now” (scroll/link to Contact)

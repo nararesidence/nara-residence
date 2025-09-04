@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - NARA Residence</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #D8CBB5;
+      color: #7A6F5F;
+    }
+
+    a { text-decoration: none; }
+    a:hover { color: #A8A29A; }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    header img.logo {
+      height: 180px;
+      margin-right: 22px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    header h1 span.nara {
+      font-family: serif;
+      color: #A8A29A;
+    }
+
+    header h1 span.residence {
+      font-family: 'Open Sans', sans-serif;
+      color: #A8A29A;
+      font-weight: 400;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      background: #f5f0e6;
+      padding: 10px 0;
+      font-weight: 600;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 120%;
+    }
+
+    nav a {
+      color: #7A6F5F;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #A8A29A;
+    }
+
+    /* Main Content */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    /* Contact Form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    label {
+      font-weight: bold;
+      color: #7A6F5F;
+      margin-bottom: 5px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      width: 100%;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      background-color: #7A6F5F;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #A8A29A;
+    }
+
+    /* Contact Info */
+    .contact-info {
+      text-align: left;
+      margin: 30px 0;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #7A6F5F;
+    }
+
+    .contact-info strong {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .contact-info a {
+      color: #7A6F5F;
+    }
+
+    .contact-info a:hover {
+      color: #A8A29A;
+    }
+
+    /* Google Map */
+    .map-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .map-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Footer */
+    footer {
+      background: #7A6F5F;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      color: #D8CBB5;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="images/nara_logo.png" alt="NARA Residence Logo" class="logo">
+    <h1><span class="nara">NARA</span> <span class="residence">Residence</span></h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="facilities.html">FACILITIES</a>
+    <a href="security.html">SECURITY</a>
+    <a href="room.html">ROOM</a>
+    <a href="contact.html">CONTACT US</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <h2>Contact Us</h2>
+
+    <!-- Contact Form -->
+    <form action="mailto:ktriwanit@gmail.com" method="post" enctype="text/plain">
+      <div>
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+
+      <!-- Contact Info (left aligned) -->
+      <div class="contact-info">
+        <strong>กรุณาทำนัดหมายเพื่อเข้าชมห้องพัก / Please schedule a visit/tour in advance:</strong>
+        Line ID: @nara24 <br>
+        Line: <a href="https://page.line.me/nara24" target="_blank">https://page.line.me/nara24</a>
+
+        <strong>เบอร์มือถือ / Contact number:</strong>
+        <a href="tel:0865595142">086-5595142</a>
+
+        <strong>วันทำการ / Operation hours:</strong>
+        จันทร์-เสาร์ / Monday - Saturday<br>
+        09:00 am - 18:00 pm
+
+        <strong>แผนที่ / Google Map link:</strong>
+        <a href="https://maps.app.goo.gl/95epbPxvJ92NS1ko8" target="_blank">https://maps.app.goo.gl/95epbPxvJ92NS1ko8</a>
+      </div>
+    </form>
+
+    <!-- Google Map -->
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.7089236619277!2d100.61534197584001!3d13.675455186708552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d5f2b658606ed%3A0x31fc402b18806809!2sNara%20residence%20(Udomsuk24)!5e0!3m2!1sth!2sth!4v1756910886873!5m2!1sth!2sth" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 NARA Residence | 
+      <a href="contact.html">Contact Us</a> | 
+      <a href="index.html"> Home</a> |
+      <a href="security.html"> Security</a> |
+      <a href="index.html"> Room</a> |
+    </p>
+  </footer>
+
+</body>
+</html>
