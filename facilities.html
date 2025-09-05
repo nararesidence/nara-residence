@@ -11,195 +11,79 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #D8CBB5;
-      color: #7A6F5F;
-    }
-
-    a { text-decoration: none; color: inherit; }
-    a:hover { color: #A8A29A; }
+    /* ... existing styles ... */
 
     /* Header */
     header {
       display: flex;
       align-items: center;
-      padding: 20px 40px;
+      padding: 20px 5%;
       background-color: #ffffff;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     header img.logo {
-      height: 60px;
-      margin-right: 15px;
+      height: clamp(40px, 6vw, 60px);
+      margin-right: 12px;
     }
     header h1 {
       margin: 0;
-      font-size: 32px;
-    }
-    header h1 span.nara {
-      font-family: serif;
+      font-size: clamp(22px, 3.2vw, 32px);
+      line-height: 1.1;
       color: #A8A29A;
+      font-weight: 600;
+      letter-spacing: .2px;
     }
-    header h1 span.residence {
-      font-family: 'Open Sans', sans-serif;
-      color: #A8A29A;
-      font-weight: 400;
-    }
+    header h1 .nara { font-family: serif; }
+    header h1 .residence { font-weight: 400; }
 
     /* Navigation */
     nav {
       display: flex;
       justify-content: center;
-      gap: 25px;
+      gap: clamp(8px, 2vw, 25px);
       background: #f5f0e6;
-      padding: 12px 0;
+      padding: 10px clamp(8px, 3vw, 24px);
       font-weight: 600;
-      font-size: 120%;
-    }
-    nav a {
+      font-size: clamp(11px, 1.2vw + 10px, 18px);
       text-transform: uppercase;
-      color: #7A6F5F;
+      white-space: nowrap;
     }
-    nav a:hover {
-      color: #A8A29A;
-    }
+    nav a { color: #7A6F5F; }
+    nav a:hover { color: #A8A29A; }
 
-    /* Add media query to adjust font size and gap on smaller screens */
+    /* Media Queries */
     @media (max-width: 768px) {
       header {
-        padding: 10px 20px;
+        padding: 10px 4%;
       }
-      nav {
-        gap: 15px;
-        font-size: 100%;
+      .logo img {
+        height: 45px;
       }
     }
 
     @media (max-width: 480px) {
       header {
-        padding: 5px 10px;
+        padding: 8px 3%;
       }
-      nav {
-        gap: 10px;
-        font-size: 80%;
-        padding: 8px 0;
+      .logo img {
+        height: 40px;
+      }
+      header h1 {
+        font-size: 24px;
       }
     }
 
-    /* Main */
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-    section { margin-bottom: 40px; }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .photo-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-    .photo-slot {
-      background: #ffffff;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .photo-slot img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    /* Footer */
-    footer {
-      background: #7A6F5F;
-      color: #ffffff;
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 14px;
-      margin-top: 40px;
-    }
-    footer a {
-      color: #ffffff;
-      font-weight: bold;
-    }
-    footer a:hover {
-      color: #D8CBB5;
-    }
+    /* ... existing styles ... */
   </style>
 </head>
 <body>
 
   <!-- Header -->
   <header>
-    <img src="images/logo.png" alt="NARA Residence Logo" class="logo">
+    <img src="images/nara_logo.png" alt="NARA Residence Logo" class="logo">
     <h1><span class="nara">NARA</span> <span class="residence">Residence</span></h1>
   </header>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="index.html">HOME</a>
-    <a href="facilities.html">FACILITIES</a>
-    <a href="security.html">SECURITY</a>
-    <a href="room.html">ROOM</a>
-    <a href="contact.html">CONTACT US</a>
-  </nav>
-
-  <!-- Main -->
-  <main>
-    <h2>Our Facilities</h2>
-    <p style="text-align:center; max-width:800px; margin: 0 auto 40px; color:#555;">
-      At NARA Residence, we believe in modern, peaceful, and eco-friendly living.
-      Our facilities are designed to enrich your lifestyle with comfort, security,
-      and harmony with nature.
-    </p>
-
-    <!-- Gym -->
-    <section>
-      <h2>Modern Gym</h2>
-      <div class="photo-grid">
-        <div class="photo-slot"><img src="images/gym.jpg" alt="Modern Gym - Equipment"></div>
-        <div class="photo-slot"><img src="images/gym2.jpg" alt="Modern Gym - Spacious Area"></div>
-        <div class="photo-slot"><img src="images/gym3.jpg" alt="Modern Gym - Eco Design"></div>
-      </div>
-    </section>
-
-    <!-- Parking -->
-    <section>
-      <h2>Ample Parking</h2>
-      <div class="photo-grid">
-        <div class="photo-slot"><img src="images/parking.jpg" alt="Parking Area - Covered"></div>
-        <div class="photo-slot"><img src="images/parking2.jpg" alt="Parking Area - Outdoor"></div>
-      </div>
-    </section>
-
-    <!-- Lobby & Elevator -->
-    <section>
-      <h2>Lobby & Elevators</h2>
-      <div class="photo-grid">
-        <div class="photo-slot"><img src="images/lobby1.jpg" alt="Lobby - Welcome Area"></div>
-        <div class="photo-slot"><img src="images/lobby2.jpg" alt="Elevator Access"></div>
-        <div class="photo-slot"><img src="images/lobby3.jpg" alt="Modern Lobby Design"></div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 NARA Residence | 
-      <a href="contact.html">Contact Us</a> | 
-      <a href="index.html">Back to Home</a>
-    </p>
-  </footer>
-
+  <!-- ... existing HTML ... -->
 </body>
 </html>
