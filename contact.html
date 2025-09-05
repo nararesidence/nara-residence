@@ -34,7 +34,7 @@
     }
 
     header img.logo {
-      height: 180px;
+      height: 150px;
       margin-right: 22px;
     }
 
@@ -64,6 +64,21 @@
       font-weight: 600;
       font-family: 'Open Sans', sans-serif;
       font-size: 120%;
+    }
+    /* Add media query to adjust font size and gap on smaller screens */
+    @media (max-width: 768px) {
+      nav {
+        gap: 15px;
+        font-size: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        gap: 10px;
+        font-size: 80%;
+        padding: 8px 0;
+      }
     }
 
     nav a {
@@ -201,7 +216,7 @@
 
   <!-- Header -->
   <header>
-    <img src="images/nara_logo.png" alt="NARA Residence Logo" class="logo">
+    <img src="images/logo.png" alt="NARA Residence Logo" class="logo">
     <h1><span class="nara">NARA</span> <span class="residence">Residence</span></h1>
   </header>
 
