@@ -68,11 +68,13 @@ footer {
   text-align: center;
   padding: 20px;
   margin-top: 40px;
+
 }
 .map-link {
   display: inline-block;
   max-width: 100%;
-  word-wrap: break-word;
+  word-wrap: break-word;      
   overflow-wrap: break-word;
-  white-space: normal;
+  white-space: normal;        
 }
+
