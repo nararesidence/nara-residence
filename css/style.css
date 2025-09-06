@@ -77,4 +77,45 @@ footer {
   overflow-wrap: break-word;
   white-space: normal;        
 }
+       .rental-info {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    .rental-box {
+      max-width: 800px;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+    }
+    .rental-box strong {
+      color: #7A6F5F;
+    }
+
+    /* Rental Rates Table */
+    .rental-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .rental-table th, .rental-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+    .rental-table th {
+      background: #f5f0e6;
+      color: #7A6F5F;
+      font-weight: 600;
+    }
+    .rental-table td {
+      background: #fff;
+    }
+    .rental-table tr:nth-child(even) td {
+      background: #fafafa;
+    }
 
