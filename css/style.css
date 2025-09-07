@@ -118,30 +118,4 @@ footer {
     .rental-table tr:nth-child(even) td {
       background: #fafafa;
     }
-/* Mobile-only image responsiveness */
-@media (max-width: 768px) {
-  /* Room images */
-  .room-section img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-
-  /* Contact section images (Google Map, logos, etc.) */
-  .contact-section img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-
-  /* Facility images */
-  .facility-section img {
-    max-width: 100%;
-    height: 70;
-    display: block;
-    margin: 0 auto;
-  }
-}
 
