@@ -118,4 +118,13 @@ footer {
     .rental-table tr:nth-child(even) td {
       background: #fafafa;
     }
+/* Fix disproportionate photos on small screens */
+@media (max-width: 768px) {
+  .gallery-item.bed img,
+  .gallery-item.bath img,
+  .feature img {
+    width: 100%;     /* take full available width */
+    height: auto;    /* scale naturally */
+  }
+}
 

@@ -203,8 +203,19 @@
       font-weight: bold;
     }
     footer a:hover {
-      color: #D8CBB5;
-    }
+  color: #D8CBB5;
+}
+
+/* Fix disproportionate photos on small screens */
+@media (max-width: 768px) {
+  .gallery-item.bed img,
+  .gallery-item.bath img,
+  .feature img {
+    width: 100%;
+    height: auto;
+  }
+}
+
   </style>
 </head>
 <body>
