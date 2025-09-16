@@ -88,12 +88,12 @@
       }
     }
 
+
     /* Main */
     main {
       max-width: 1200px;
       margin: 0 auto;
       padding: 40px 20px;
-      box-sizing: border-box;
     }
 
     section { margin-bottom: 60px; }
@@ -115,9 +115,10 @@
     }
 
     .photo-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* fixed for smaller screens */
-      gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+    /* wider slots */
+    gap: 20px;
     }
 
     .photo-slot {
@@ -130,17 +131,9 @@
 
     .photo-slot img {
       width: 100%;
-      max-height: 500px;
-      height: auto;
+      height: 500px;
       object-fit: cover;
       border-radius: 8px;
-    }
-
-    /* Responsive Fixes */
-    @media (max-width: 480px) {
-      main {
-        padding: 20px 12px; /* extra breathing space */
-      }
     }
 
     /* Footer */
@@ -205,6 +198,7 @@
         <div class="photo-slot"><img src="images/surveillance/cctv8.jpg" alt="CCTV Camera 8"></div>
       </div>
     </section>
+
 
     <!-- Keycard Access -->
     <section id="keycard">
