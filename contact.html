@@ -115,7 +115,7 @@ form textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 15px;
-  width: 150%;              /* expand 30% wider on large screens */
+  width: 180%;              /* expand 30% wider on large screens */
   max-width: 700px;         /* prevent excessive stretching */
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
@@ -127,8 +127,10 @@ form textarea {
 @media (max-width: 768px) {
   form input,
   form textarea {
-    width: 100%;            /* fit neatly within container */
-    max-width: 100%;
+     width: 100%;      /* take full width of container */
+    max-width: 100%;  /* prevent overflow */
+    margin: 0 auto;   /* keep centered */
+    display: block;
   }
 }
  
