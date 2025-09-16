@@ -1,0 +1,14 @@
+I need to create clean HTML that only adjusts the menu bar and font for mobile use, ensuring items like "Home" and "Contact Us" fit well within the frame. The goal is to avoid overflow, like having "CONTACT US" wrap to two lines. I’m thinking about options like reducing font size, spacing, or even allowing the menu to scroll horizontally. But they specified only to adjust the menu and font, not to implement a hamburger menu.
+
+Adjusting header for mobile view
+
+The user initially didn't want a large restructure, just to adjust the fonts and menu on the header while keeping other elements as they are. They want "Home" and "Contact Us" to stay within the frame on mobile. I think they might be open to a horizontal scroll or dropdown menu, but they emphasized only the menu and font. I’ll implement responsive rules, like reducing font size and gaps, and making sure the navigation fits well without overflow on smaller screens.
+
+Ensuring navigation fits on mobile
+
+The user wants "Home" and "Contact Us" to stay visible on the mobile view, as I see from the screenshot showing "CONTACT US" wrapping to two lines. It seems they prefer it to remain on one line. A horizontal scroll might still cause some items to go out of view. They likely want the full nav container to show all labels without cutting them off. Reducing the font size to 12-13 px and adjusting the gaps to 10 px might help fit everything on one line.
+
+Calculating navigation item widths
+
+I want to figure out the approximate widths of the menu items: "HOME" is around 40 px, "FACILITIES" about 100 px, "SECURITY" 80 px, "ROOM" around 40 px, and "CONTACT US" close to 110 px. That gives a total of about 370 px plus gaps, which is too much for a 360 px space. I need to reduce font size to 12 px, adjust gaps, and potentially use a small amount of padding. Using fluid scaling could help fit everything within the frame more comfortably.
+

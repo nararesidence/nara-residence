@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,6 +9,36 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ... existing styles ... */
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      background: #f5f0e6;
+      padding: 12px 0;
+      font-weight: 600;
+      font-size: 120%;
+    }
+
+    /* Add media query to adjust font size and gap on smaller screens */
+    @media (max-width: 768px) {
+      nav {
+        gap: 15px;
+        font-size: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        gap: 10px;
+        font-size: 80%;
+        padding: 8px 0;
+      }
+    } 
 
   <style>
     body {
@@ -31,8 +61,8 @@
     }
 
     header img.logo {
-      height: 150px;
-      margin-right: 22px;
+      height: 60px;
+      margin-right: 15px;
     }
 
     header h1 {
@@ -67,22 +97,6 @@
     }
     nav a:hover {
       color: #A8A29A;
-    }
-
-    /* Add media query to adjust font size and gap on smaller screens */
-    @media (max-width: 768px) {
-      nav {
-        gap: 15px;
-        font-size: 100%;
-      }
-    }
-
-    @media (max-width: 480px) {
-      nav {
-        gap: 10px;
-        font-size: 80%;
-        padding: 8px 0;
-      }
     }
 
     /* Main */
@@ -142,8 +156,8 @@
       text-align: center;
     }
     .feature img {
-      width: 100%;
-      height: 230px;
+      max-width: 100%;
+      height: 180px;
       object-fit: cover;
       margin-bottom: 15px;
       border-radius: 8px;
@@ -212,7 +226,8 @@
       <h2>About Nara Residence</h2>
       <p>
         Nara Residence offers modern living with 7 floors of comfort, a fitness gym, 24/7 surveillance system,
-        and certified fire exits for safety. Located on 24 Udom Suk Road, Bangna, we blend convenience with security for a better lifestyle.
+        and certified fire exits for safety. Located in 88 Udom Suk Road, Bangna,
+        we blend convenience with security for a better lifestyle.
       </p>
     </section>
 
@@ -229,10 +244,10 @@
       <div class="feature">
         <img src="images/safety.jpg" alt="Safety Regulations">
         <h3><a href="security.html">SAFETY REGULATIONS</a></h3>
-        <p>We prioritize resident safety with certified fire exits.</p>
+        <p>We prioritize resident safety with certified fire exits and clear safety rules.</p>
       </div>
       <div class="feature">
-        <img src="images/keycard1.jpg" alt="24/7 Surveillance">
+        <img src="images/surveillance.jpg" alt="24/7 Surveillance">
         <h3><a href="security.html">24/7 SURVEILLANCE</a></h3>
         <p>Advanced CCTV system with access keycards for your safety and peace of mind.</p>
       </div>
@@ -247,10 +262,8 @@
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 NARA Residence | 
-      <a href="contact.html">Contact Us</a> |
-      <a href="room.html">Room</a>  | 
-      <a href="facilities.html">Facilities</a>  |
-      <a href="security.html">Security</a>
+      <a href="contact.html">Contact Us</a> | 
+      <a href="facilities.html">Facilities</a>
     </p>
   </footer>
 
