@@ -74,12 +74,28 @@
       color: #A8A29A;
     }
 
-    /* Responsive Nav */
     @media (max-width: 768px) {
       nav { gap: 15px; font-size: 100%; }
     }
     @media (max-width: 480px) {
       nav { gap: 10px; font-size: 80%; padding: 8px 0; }
+    }
+
+    /* Banner Photo */
+    .banner-photo {
+      width: 100%;
+      max-width: 1477px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .banner-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
     }
 
     /* Main Content */
@@ -109,32 +125,29 @@
       margin: 0 auto;
     }
 
-   form input,
-form textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 15px;
-  width: 180%;              /* expand 30% wider on large screens */
-  max-width: 700px;         /* prevent excessive stretching */
-  font-family: 'Open Sans', sans-serif;
-  box-sizing: border-box;
-  display: block;
-  margin: 0 auto;           /* keep centered */
-}
+    form input,
+    form textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 15px;
+      width: 180%;       /* expand 30% wider on large screens */
+      max-width: 700px;
+      font-family: 'Open Sans', sans-serif;
+      box-sizing: border-box;
+      display: block;
+      margin: 0 auto;
+    }
 
-/* Responsive adjustment for small screens */
-@media (max-width: 768px) {
-  form input,
-  form textarea {
-     width: 130%;      /* take full width of container */
-    max-width: 130%;  /* prevent overflow */
-    margin: 0 auto;   /* keep centered */
-    display: block;
-  }
-}
- 
- 
+    @media (max-width: 768px) {
+      form input,
+      form textarea {
+        width: 100%;      /* full width of container */
+        max-width: 100%;
+        margin: 0 auto;
+      }
+    }
+
     textarea {
       min-height: 120px;
       resize: vertical;
@@ -164,7 +177,6 @@ form textarea {
       background-color: #A8A29A;
     }
 
-    /* Character count */
     .char-count {
       width: 100%;
       font-size: 12px;
@@ -206,7 +218,7 @@ form textarea {
     /* Google Map */
     .map-container {
       position: relative;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
       border-radius: 10px;
@@ -243,7 +255,6 @@ form textarea {
   </style>
 </head>
 
-
 <body>
 
   <!-- Header -->
@@ -260,6 +271,11 @@ form textarea {
     <a href="room.html">ROOM</a>
     <a href="contact.html">CONTACT US</a>
   </nav>
+
+  <!-- Banner Photo -->
+  <section class="banner-photo">
+    <img src="images/narares_front.jpg" alt="NARA Residence Banner">
+  </section>
 
   <!-- Main Content -->
   <main>
@@ -333,7 +349,6 @@ form textarea {
       });
     }
 
-    // Initialize counters with new limits
     updateCharCount('name', 'name-count', 40);
     updateCharCount('email', 'email-count', 40);
     updateCharCount('message', 'message-count', 300);
