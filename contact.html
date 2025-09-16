@@ -109,17 +109,28 @@
       margin: 0 auto;
     }
 
-    form input,
-    form textarea 
-    input, textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 15px;
-    width: 120%;   /* Expanded to 2.5x wider */
-    font-family: 'Open Sans', sans-serif;
-    box-sizing: border-box;
-    }
+   form input,
+form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+  width: 150%;              /* expand 30% wider on large screens */
+  max-width: 700px;         /* prevent excessive stretching */
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;           /* keep centered */
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
+  form input,
+  form textarea {
+    width: 100%;            /* fit neatly within container */
+    max-width: 100%;
+  }
+}
  
  
     textarea {
