@@ -272,15 +272,18 @@
     <form action="mailto:ktriwanit@gmail.com" method="post" enctype="text/plain">
       <div>
         <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" required maxlength="25">
+        <span class="char-count" id="name-count">25 characters remaining</span>
       </div>
       <div>
         <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required maxlength="25">
+        <span class="char-count" id="email-count">25 characters remaining</span>
       </div>
       <div>
         <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
+        <textarea id="message" name="message" required maxlength="200"></textarea>
+        <span class="char-count" id="message-count">200 characters remaining</span>
       </div>
       <button type="submit">Send Message</button>
 
@@ -324,3 +327,7 @@
 
 </body>
 </html>
+
+
+
+
