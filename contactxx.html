@@ -131,7 +131,7 @@
       border: 1px solid #ccc;
       border-radius: 5px;
       font-size: 15px;
-      width: 180%;
+      width: 180%;       /* expand 30% wider on large screens */
       max-width: 700px;
       font-family: 'Open Sans', sans-serif;
       box-sizing: border-box;
@@ -142,7 +142,7 @@
     @media (max-width: 768px) {
       form input,
       form textarea {
-        width: 100%;
+        width: 100%;      /* full width of container */
         max-width: 100%;
         margin: 0 auto;
       }
@@ -282,8 +282,7 @@
     <h2>Contact Us</h2>
 
     <!-- Contact Form -->
-    <!-- (Line 214) CHANGED: action now points to send_mail.php -->
-    <form action="send_mail.php" method="post">
+    <form action="mailto:ktriwanit@gmail.com" method="post" enctype="text/plain">
       <div>
         <label for="name">Your Name</label>
         <input type="text" id="name" name="name" required maxlength="40">
