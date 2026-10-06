@@ -1,220 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the fitness room, parking, elevator and laundry facilities at NARA Residence in Udom Suk.">
   <title>Facilities | NARA Residence</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #D8CBB5;
-      color: #7A6F5F;
-    }
-
-    a { text-decoration: none; color: inherit; }
-    a:hover { color: #A8A29A; }
-
-    /* Header */
-    header {
-      display: flex;
-      align-items: center;
-      padding: 20px 40px;
-      background-color: #ffffff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    header img.logo {
-      height: 150px;
-      margin-right: 22px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-    }
-    header h1 span.nara {
-      font-family: serif;
-      color: #A8A29A;
-    }
-    header h1 span.residence {
-      font-family: 'Open Sans', sans-serif;
-      color: #A8A29A;
-      font-weight: 400;
-    }
-
-    /* Navigation */
-    nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  background: #f5f0e6;
-  padding: 12px 0;
-  font-weight: 600;
-  font-size: 120%;
-  }
-    nav a {
-      text-transform: uppercase;
-      color: #7A6F5F;
-    }
-    nav a:hover {
-      color: #A8A29A;
-    }
-
-    /* Add media query to adjust font size and gap on smaller screens */
-    @media (max-width: 768px) {
-      nav {
-        gap: 15px;
-        font-size: 100%;
-      }
-    }
-
-    @media (max-width: 480px) {
-      nav {
-        gap: 10px;
-        font-size: 80%;
-        padding: 8px 0;
-      }
-    }
-
-    /* Main */
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-    section { margin-bottom: 40px; }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .photo-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-    .photo-slot {
-      background: #ffffff;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-     
-      .photo-slot img {
-       width: 100%;
-       height: 400px; 
-       object-fit: cover;
-       border-radius: 8px; 
-    }
-    .photo-slot.washing {
-  display: flex;
-  align-items: center;   /* vertical center */
-  justify-content: center; /* horizontal center */
-  height: 500px; /* fixed frame height */
-  overflow: hidden; /* hide overflow if needed */
-  }
-
-.photo-slot.washing img {
-  width: auto;
-  height: 100%;  /* scale to fill height */
-  object-fit: contain; /* show full image */
-  }
-
-   
-  
-    /* Footer */
-    footer {
-      background: #7A6F5F;
-      color: #ffffff;
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 14px;
-      margin-top: 40px;
-    }
-    footer a {
-      color: #ffffff;
-      font-weight: bold;
-    }
-    footer a:hover {
-      color: #D8CBB5;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
-    <img src="images/logo.png" alt="NARA Residence Logo" class="logo">
-    <h1><span class="nara">NARA</span> <span class="residence">Residence</span></h1>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="NARA Residence home"><img src="images/logo.png" alt=""><span class="brand-name"><strong>NARA</strong> Residence</span></a>
+      <button class="nav-toggle" type="button" data-menu-button aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation">☰</button>
+      <nav class="site-nav" id="site-navigation" data-navigation aria-label="Main navigation">
+        <a href="index.html">Home</a><a href="room.html">Rooms &amp; Rates</a><a href="facilities.html" aria-current="page">Facilities</a><a href="security.html">Safety</a><a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="index.html">HOME</a>
-    <a href="facilities.html">FACILITIES</a>
-    <a href="security.html">SECURITY</a>
-    <a href="room.html">ROOM</a>
-    <a href="contact.html">CONTACT US</a>
-  </nav>
-
-  <!-- Main -->
-  <main>
-    <h2>Our Facilities</h2>
-    <p style="text-align:center; max-width:800px; margin: 0 auto 40px; color:#555;">
-      At NARA Residence, we believe in modern, peaceful, and eco-friendly living.
-      Our facilities are designed to enrich your lifestyle with comfort, security,
-      and well-being.
-    </p>
-
-    <!-- Gym -->
-    <section>
-      <h2>Modern Gym</h2>
-      <div class="photo-grid">
-        <div class="photo-slot"><img src="images/gym.jpg" alt="Modern Gym - Equipment" loading="lazy"></div>
-        <div class="photo-slot"><img src="images/gym2.jpg" alt="Modern Gym - Spacious Area" loading="lazy"></div>
-        <div class="photo-slot"><img src="images/gym3.jpg" alt="Modern Gym - Eco Design" loading="lazy"></div>
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="shell page-hero-grid">
+        <div class="page-hero-copy">
+          <p class="eyebrow">Facilities</p>
+          <h1>Everything you need for everyday living.</h1>
+          <p class="lead">Keep active in the fitness room, take care of laundry on site and enjoy the convenience of parking and elevator access.</p>
+        </div>
+        <figure class="page-hero-image"><img src="images/gym2.jpg" alt="NARA Residence fitness room"></figure>
       </div>
     </section>
 
-    <!-- Parking -->
-    <section>
-      <h2>Ample Parking</h2>
-      <div class="photo-grid">
-        <div class="photo-slot"><img src="images/parking.jpg" alt="Parking Area - Covered"></div>
-        <div class="photo-slot"><img src="images/parking2.jpg" alt="Parking Area - Outdoor"></div>
+    <section class="section section-white">
+      <div class="shell">
+        <div class="section-heading centered">
+          <p class="eyebrow">Fitness room</p>
+          <h2>Make movement part of your routine.</h2>
+          <p>Exercise close to home in a bright, practical space equipped for everyday workouts.</p>
+        </div>
+        <div class="photo-grid facility-gallery">
+          <button class="zoom-photo" type="button" data-zoom-src="images/gym.jpg" data-zoom-alt="Exercise equipment in the NARA Residence fitness room" aria-label="Enlarge fitness room equipment photo">
+            <img src="images/gym.jpg" alt="Exercise equipment in the fitness room" loading="lazy">
+          </button>
+          <button class="zoom-photo" type="button" data-zoom-src="images/gym2.jpg" data-zoom-alt="Wide view of the NARA Residence fitness room" aria-label="Enlarge wide fitness room photo">
+            <img src="images/gym2.jpg" alt="Spacious fitness room interior" loading="lazy">
+          </button>
+          <button class="zoom-photo" type="button" data-zoom-src="images/gym3.jpg" data-zoom-alt="Cardio equipment beside the fitness room windows" aria-label="Enlarge fitness room cardio equipment photo">
+            <img src="images/gym3.jpg" alt="Fitness room at NARA Residence" loading="lazy">
+          </button>
+        </div>
       </div>
     </section>
 
-    <!-- Elevator & Laundry -->
-    <section>
-      <h2>Elevator & Laundry</h2>
-      <div class="photo-grid">
-        <div class="photo-slot"><img src="images/elevator.jpg" alt="Elevator"></div>
-        <div class="photo-slot"><img src="images/washing2.jpg" alt="Laundry room"></div>
-        <div class="photo-slot"><img src="images/washing.jpg" alt="Washing Machine"></div>
+    <section class="section">
+      <div class="shell split">
+        <div class="split-media">
+          <img src="images/parking.jpg" alt="Covered parking area" loading="lazy">
+          <img src="images/parking2.jpg" alt="Outdoor parking area" loading="lazy">
+        </div>
+        <div class="split-copy">
+          <p class="eyebrow">Parking</p>
+          <h2>Convenient parking on site.</h2>
+          <p>Covered and outdoor parking areas make arriving home and heading out straightforward.</p>
+        </div>
       </div>
     </section>
+
+    <section class="section section-white">
+      <div class="shell">
+        <div class="section-heading centered">
+          <p class="eyebrow">Everyday convenience</p>
+          <h2>Elevator and laundry facilities.</h2>
+          <p>Shared facilities are easy to access and designed to make day-to-day living more comfortable.</p>
+        </div>
+        <div class="photo-grid facility-gallery utility-gallery">
+          <button class="zoom-photo" type="button" data-zoom-src="images/elevator-straightened.jpg" data-zoom-alt="Front view of the passenger elevator at NARA Residence" aria-label="Enlarge passenger elevator photo">
+            <img src="images/elevator-straightened.jpg" alt="Passenger elevator centered within its frame" loading="lazy">
+          </button>
+          <button class="zoom-photo" type="button" data-zoom-src="images/washing2.jpg" data-zoom-alt="Two coin-operated washing machines in the NARA Residence laundry room" aria-label="Enlarge washing machines photo">
+            <img src="images/washing2.jpg" alt="Two washing machines centered within their frame" loading="lazy">
+          </button>
+          <button class="zoom-photo" type="button" data-zoom-src="images/washing.jpg" data-zoom-alt="Two coin-operated dryers in the NARA Residence laundry room" aria-label="Enlarge dryers photo">
+            <img src="images/washing.jpg" alt="Two dryers centered within their frame" loading="lazy">
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell cta">
+        <h2>Ready to take a closer look?</h2>
+        <p>Arrange a visit and explore the rooms and shared facilities in person.</p>
+        <div class="actions"><a class="button button-primary" href="contact.html">Arrange a Viewing</a><a class="button button-secondary" href="room.html">Explore Rooms &amp; Rates</a></div>
+      </div>
+    </section>
+
+    <dialog class="photo-lightbox" data-lightbox aria-label="Enlarged facility photo">
+      <div class="lightbox-panel">
+        <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close enlarged photo">×</button>
+        <img data-lightbox-image src="" alt="">
+        <p data-lightbox-caption></p>
+      </div>
+    </dialog>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 NARA Residence | 
-      <a href="contact.html">Contact Us</a> | 
-      <a href="index.html">Home</a>  |
-      <a href="security.html">Security</a>  |
-      <a href="room.html">Room</a>
-    </p>
-  </footer>
-
+  <footer class="site-footer"><div class="shell footer-inner"><div><div class="footer-brand">NARA Residence</div><p class="footer-copy">© <span data-current-year>2026</span> NARA Residence, Udom Suk, Bangkok.</p></div><nav class="footer-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="room.html">Rooms &amp; Rates</a><a href="security.html">Safety</a><a href="contact.html">Contact</a></nav></div></footer>
 </body>
 </html>

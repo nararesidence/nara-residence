@@ -1,261 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NARA Residence</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #D8CBB5;
-      color: #7A6F5F;
-    }
-
-    a { text-decoration: none; color: inherit; }
-    a:hover { color: #A8A29A; }
-
-    /* Header */
-    header {
-      display: flex;
-      align-items: center;
-      padding: 20px 40px;
-      background-color: #ffffff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    header img.logo {
-      height: 150px;
-      margin-right: 22px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-    }
-
-    header h1 span.nara {
-      font-family: serif;
-      color: #A8A29A;
-    }
-    header h1 span.residence {
-      font-family: 'Open Sans', sans-serif;
-      color: #A8A29A;
-      font-weight: 400;
-    }
-
-    /* Navigation */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      background: #f5f0e6;
-      padding: 12px 0;
-      font-weight: 600;
-      font-size: 120%;
-    }
-
-    nav a {
-      text-transform: uppercase;
-      color: #7A6F5F;
-    }
-    nav a:hover {
-      color: #A8A29A;
-    }
-
-    /* Add media query to adjust font size and gap on smaller screens */
-    @media (max-width: 768px) {
-      nav {
-        gap: 15px;
-        font-size: 100%;
-      }
-    }
-
-    @media (max-width: 480px) {
-      nav {
-        gap: 10px;
-        font-size: 80%;
-        padding: 8px 0;
-      }
-    }
-
-    /* Main */
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    section { margin-bottom: 40px; }
-
-    .photo-slot {
-      background: #ffffff;
-      padding: 20px;
-      text-align: center;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .photo-slot img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-    /* About */
-    .about {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .about h2 {
-      font-size: 26px;
-      margin-bottom: 15px;
-    }
-    .about p {
-      font-size: 17px;
-      line-height: 1.6;
-      color: #555;
-    }
-
-    /* Features */
-    .features-title {
-      text-align: center;
-      margin-bottom: 25px;
-      font-size: 26px;
-    }
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-    .feature {
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .feature img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-      margin-bottom: 15px;
-      border-radius: 8px;
-    }
-    .feature h3 {
-      font-size: 20px;
-      margin-bottom: 8px;
-      color: #7A6F5F;
-    }
-    .feature h3 a {
-      color: #7A6F5F;
-      font-weight: bold;
-    }
-    .feature h3 a:hover {
-      color: #A8A29A;
-    }
-    .feature p {
-      font-size: 15px;
-      color: #555;
-    }
-
-    /* Footer */
-    footer {
-      background: #7A6F5F;
-      color: #ffffff;
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 14px;
-      margin-top: 40px;
-    }
-    footer a {
-      color: #ffffff;
-      font-weight: bold;
-    }
-    footer a:hover {
-      color: #D8CBB5;
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Comfortable monthly rooms in Udom Suk, Bangkok, with convenient facilities, keycard access and flexible lease options.">
+  <title>NARA Residence | Comfortable Living in Udom Suk</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
-    <img src="images/logo.png" alt="NARA Residence Logo" class="logo">
-    <h1><span class="nara">NARA</span> <span class="residence">Residence</span></h1>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="NARA Residence home">
+        <img src="images/logo.png" alt="">
+        <span class="brand-name"><strong>NARA</strong> Residence</span>
+      </a>
+      <button class="nav-toggle" type="button" data-menu-button aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation">☰</button>
+      <nav class="site-nav" id="site-navigation" data-navigation aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="room.html">Rooms &amp; Rates</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="security.html">Safety</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="index.html">HOME</a>
-    <a href="facilities.html">FACILITIES</a>
-    <a href="security.html">SECURITY</a>
-    <a href="room.html">ROOM</a>
-    <a href="contact.html">CONTACT US</a>
-  </nav>
-
-  <!-- Main -->
-  <main>
-    <!-- Top photo -->
-    <section class="photo-slot">
-      <img src="images/building.jpg" alt="Top Photo Slot">
-    </section>
-
-    <!-- About -->
-    <section class="about">
-      <h2>About Nara Residence</h2>
-      <p>
-        Nara Residence offers modern living with 7 floors of comfort, a fitness gym, 24/7 surveillance system,
-        and certified fire exits for safety. Located on 24 Udom Suk Road, Bangna, we blend convenience with security for a better lifestyle.
-      </p>
-    </section>
-
-    <!-- Second photo -->
-    <section class="photo-slot">
-      <img src="images/gym.jpg" alt="Modern Gym">
-      <h3><a href="facilities.html">MODERN GYM</a></h3>
-      <p>Stay fit with the fully equipped fitness room.</p>
-    </section>
-
-    <!-- Features -->
-    <h2 class="features-title">Why choose NARA Residence?</h2>
-    <section class="features">
-      <div class="feature">
-        <img src="images/fireexit3.jpg" alt="Safety Regulations">
-        <h3><a href="security.html">SAFETY REGULATIONS</a></h3>
-        <p>We prioritize resident safety with certified fire exits.</p>
+  <main id="main-content">
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Udom Suk · Bangkok</p>
+          <h1>A comfortable place to call home.</h1>
+          <p class="lead">Welcome to NARA Residence in Udom Suk, Bangkok. Discover comfortable rooms, convenient facilities and flexible monthly leases.</p>
+          <div class="actions">
+            <a class="button button-primary" href="room.html">Explore Rooms &amp; Rates</a>
+            <a class="button button-secondary" href="contact.html">Arrange a Viewing</a>
+          </div>
+        </div>
+        <figure class="hero-image">
+          <img src="images/building.jpg" alt="Exterior of NARA Residence in Udom Suk">
+        </figure>
       </div>
-      <div class="feature">
-        <img src="images/keycard1.jpg" alt="24/7 Surveillance">
-        <h3><a href="security.html">24/7 SURVEILLANCE</a></h3>
-        <p>Advanced CCTV system with access keycards for your safety and peace of mind.</p>
+    </section>
+
+    <div class="shell fact-strip" aria-label="Residence highlights">
+      <div class="fact"><strong>Monthly stays</strong><span>Flexible leases from one month</span></div>
+      <div class="fact"><strong>28–39 m²</strong><span>A choice of comfortable room sizes</span></div>
+      <div class="fact"><strong>Udom Suk</strong><span>Convenient access to everyday essentials</span></div>
+    </div>
+
+    <section class="section section-white">
+      <div class="shell split">
+        <div class="split-copy">
+          <p class="eyebrow">About NARA Residence</p>
+          <h2>Everyday comfort in Udom Suk.</h2>
+          <p>Enjoy the convenience of an on-site fitness room, laundry facilities and parking, with keycard access and CCTV throughout shared areas.</p>
+          <a class="button button-secondary" href="facilities.html">View the Facilities</a>
+        </div>
+        <div class="split-media">
+          <img src="images/gym.jpg" alt="Fitness equipment in the NARA Residence gym" loading="lazy">
+          <img src="images/parking.jpg" alt="Covered parking at NARA Residence" loading="lazy">
+        </div>
       </div>
-      <div class="feature">
-        <img src="images/parking.jpg" alt="Ample Parking">
-        <h3><a href="facilities.html">AMPLE PARKING</a></h3>
-        <p>Spacious parking to accommodate cars with CCTV installed.</p>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section-heading centered">
+          <p class="eyebrow">Designed for everyday life</p>
+          <h2>Comfort, convenience and peace of mind.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <img src="images/gym.jpg" alt="NARA Residence fitness room" loading="lazy">
+            <div class="feature-card-copy">
+              <h3><a href="facilities.html">Fitness room</a></h3>
+              <p>Stay active close to home with convenient on-site exercise equipment.</p>
+            </div>
+          </article>
+          <article class="feature-card">
+            <img src="images/keycard1.jpg" alt="Keycard access at NARA Residence" loading="lazy">
+            <div class="feature-card-copy">
+              <h3><a href="security.html">Controlled access</a></h3>
+              <p>Keycard entry and CCTV support a secure living environment in shared areas.</p>
+            </div>
+          </article>
+          <article class="feature-card">
+            <img src="images/fireexit3.jpg" alt="Fire safety equipment at NARA Residence" loading="lazy">
+            <div class="feature-card-copy">
+              <h3><a href="security.html">Fire safety</a></h3>
+              <p>Clearly marked exits and fire safety equipment are provided throughout the building.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="shell cta">
+        <h2>Come and see your next home.</h2>
+        <p>Message us on LINE to check availability or arrange a viewing. Please book your visit in advance.</p>
+        <div class="actions">
+          <a class="button button-primary" href="https://page.line.me/nara24" target="_blank" rel="noopener">Chat on LINE</a>
+          <a class="button button-secondary" href="contact.html">Contact &amp; Directions</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 NARA Residence | 
-      <a href="contact.html">Contact Us</a> |
-      <a href="room.html">Room</a>  | 
-      <a href="facilities.html">Facilities</a>  |
-      <a href="security.html">Security</a>
-    </p>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div>
+        <div class="footer-brand">NARA Residence</div>
+        <p class="footer-copy">© <span data-current-year>2026</span> NARA Residence, Udom Suk, Bangkok.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="room.html">Rooms &amp; Rates</a><a href="facilities.html">Facilities</a><a href="security.html">Safety</a><a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </footer>
-
 </body>
 </html>

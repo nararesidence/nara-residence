@@ -1,331 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rooms - NARA Residence</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #D8CBB5;
-      color: #7A6F5F;
-    }
-
-    a { text-decoration: none; color: inherit; }
-    a:hover { color: #A8A29A; }
-
-    /* Header */
-    header {
-      display: flex;
-      align-items: center;
-      padding: 20px 40px;
-      background-color: #ffffff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    header img.logo {
-      height: 150px;
-      margin-right: 22px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-    }
-
-    header h1 span.nara {
-      font-family: serif;
-      color: #A8A29A;
-    }
-    header h1 span.residence {
-      font-family: 'Open Sans', sans-serif;
-      color: #A8A29A;
-      font-weight: 400;
-    }
-
-    /* Navigation */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      background: #f5f0e6;
-      padding: 12px 0;
-      font-weight: 600;
-      font-size: 120%;
-    }
-
-    nav a {
-      text-transform: uppercase;
-      color: #7A6F5F;
-    }
-    nav a:hover {
-      color: #A8A29A;
-    }
-
-    /* Responsive Nav */
-    @media (max-width: 768px) {
-      nav { gap: 15px; font-size: 100%; }
-    }
-    @media (max-width: 480px) {
-      nav { gap: 10px; font-size: 80%; padding: 8px 0; }
-    }
-
-    /* Main */
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    section { margin-bottom: 40px; }
-
-    /* Section Titles */
-    .features-title {
-      text-align: center;
-      margin-bottom: 25px;
-      font-size: 26px;
-    }
-
-    /* Rental Table */
-    .rental-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-    }
-    .rental-table th, .rental-table td {
-      border: 1px solid #7A6F5F;
-      padding: 10px;
-      text-align: center;
-    }
-    .rental-table th {
-      background: #f5f0e6;
-    }
-
-    /* Grid for rooms */
-    .gallery {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-    .gallery-item {
-      background: #ffffff;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    /* Bed Images */
-    .gallery-item.bed img {
-      width: 80%;
-      height: 500px; /* twice the old size */
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    /* Bath Images */
-    .gallery-item.bath img {
-      width: 70%;
-      height: 700px; /* same as in-room features */
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    /* Features Section */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .feature {
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .feature img {
-      max-width: 100%;
-      height: 450px;
-      object-fit: cover;
-      margin-bottom: 15px;
-      border-radius: 10px;
-    }
-    .feature h3 {
-      font-size: 20px;
-      margin-bottom: 8px;
-      color: #7A6F5F;
-    }
-
-    /* CTA */
-    .cta {
-      text-align: center;
-      margin-top: 50px;
-    }
-    .cta h2 {
-      font-size: 24px;
-      margin-bottom: 15px;
-    }
-    .cta p {
-      font-size: 16px;
-      margin-bottom: 20px;
-    }
-    .cta a.btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background: #7A6F5F;
-      color: #fff;
-      font-weight: bold;
-      border-radius: 6px;
-    }
-    .cta a.btn:hover {
-      background: #A8A29A;
-    }
-
-    /* Footer */
-    footer {
-      background: #7A6F5F;
-      color: #ffffff;
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 14px;
-      margin-top: 40px;
-    }
-    footer a {
-      color: #ffffff;
-      font-weight: bold;
-    }
-    footer a:hover {
-  color: #D8CBB5;
-}
-
-/* Fix disproportionate photos on small screens */
-@media (max-width: 768px) {
-  .gallery-item.bed img,
-  .gallery-item.bath img,
-  .feature img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore room sizes, monthly rates, layouts and in-room features at NARA Residence in Udom Suk.">
+  <title>Rooms &amp; Rates | NARA Residence</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
-    <img src="images/logo.png" alt="NARA Residence Logo" class="logo">
-    <h1><span class="nara">NARA</span> <span class="residence">Residence</span></h1>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="NARA Residence home"><img src="images/logo.png" alt=""><span class="brand-name"><strong>NARA</strong> Residence</span></a>
+      <button class="nav-toggle" type="button" data-menu-button aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation">☰</button>
+      <nav class="site-nav" id="site-navigation" data-navigation aria-label="Main navigation">
+        <a href="index.html">Home</a><a href="room.html" aria-current="page">Rooms &amp; Rates</a><a href="facilities.html">Facilities</a><a href="security.html">Safety</a><a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="index.html">HOME</a>
-    <a href="facilities.html">FACILITIES</a>
-    <a href="security.html">SECURITY</a>
-    <a href="room.html">ROOM</a>
-    <a href="contact.html">CONTACT US</a>
-  </nav>
-
-  <!-- Main -->
-  <main>
-    <!-- Rental Rates -->
-    <h2 class="features-title">Rental Rates</h2>
-    <section class="rental-info">
-      <div class="rental-box">
-        <p>
-          อพาร์ตเม้นต์เปิดใหม่ สไตล์คอนโด นารา เรสซิเดนซ์ สงบ สะอาด ปลอดภัย เดินทางสะดวก ห้องพักปลอดบุหรี่ ห้ามเลี้ยงสัตว์ สัญญาขั้นต่ำ 1 เดือน ใกล้ BTS อุดมสุข /
-          Newly opened apartment in condo style, Nara Residence offers Peaceful, clean, safe, and convenient location/highly accessible.
-           Non-smoking rooms. No pets allowed, Minimum contract 1 month located near BTS Udomsuk.
-        </p>
-        <p><strong>ห้องพักรายเดือน/ Monthly rental •</strong></p>
-
-        <table class="rental-table">
-          <thead>
-            <tr>
-              <th>ขนาดห้อง/Room size</th>
-              <th>อัตราค่าเช่า/Rates</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>32–35 ตร.ม./sqm</td>
-              <td>8,500–9,000 บาท/bht</td>
-            </tr>
-            <tr>
-              <td>39 ตร.ม./sqm</td>
-              <td>9,800 บาท/bht</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p><em>**** ไม่มีค่าส่วนกลาง/No monthly facility fees</em></p>
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="shell page-hero-grid">
+        <div class="page-hero-copy">
+          <p class="eyebrow">Rooms &amp; Rates</p>
+          <h1>Find a room that fits your everyday life.</h1>
+          <p class="lead">Explore room sizes from 28 to 39 m², with monthly rates based on your lease length. Contact us to check current availability.</p>
+          <div class="actions"><a class="button button-primary" href="contact.html">Check Availability</a><a class="button button-secondary" href="#rates">View Rates</a></div>
+        </div>
+        <figure class="page-hero-image"><img src="images/Room/bed1.jpg" alt="Furnished bedroom at NARA Residence"></figure>
       </div>
     </section>
 
-    <!-- Room Types / Layouts -->
-    <h2 class="features-title">Rooms / Layouts</h2>
-    <section class="gallery">
-      <!-- 8 bed photos -->
-      <div class="gallery-item bed"><img src="images/Room/bed1.jpg" alt="Bedroom 1"></div>
-      <div class="gallery-item bed"><img src="images/Room/bed2.jpg" alt="Bedroom 2"></div>
-      <div class="gallery-item bed"><img src="images/Room/bed3.jpg" alt="Bedroom 3"></div>
-      <div class="gallery-item bed"><img src="images/Room/bed4.jpg" alt="Bedroom 4"></div>
-      <div class="gallery-item bed"><img src="images/Room/bed5.jpg" alt="Bedroom 5"></div>
-      <div class="gallery-item bed"><img src="images/Room/bed6.jpg" alt="Bedroom 6"></div>
-      <div class="gallery-item bed"><img src="images/Room/bed7.jpg" alt="Bedroom 7"></div>
-      <div class="gallery-item bed"><img src="images/Room/bed8.jpg" alt="Bedroom 8"></div>
-
-      <!-- 2 bathroom photos -->
-      <div class="gallery-item bath"><img src="images/Room/bath1.jpg" alt="Bathroom 1"></div>
-      <div class="gallery-item bath"><img src="images/Room/bath2.jpg" alt="Bathroom 2"></div>
-    </section>
-
-    <!-- In-room Features -->
-    <h2 class="features-title">In-room Features</h2>
-    <section class="features">
-      <div class="feature">
-        <img src="images/AC.jpg" alt="Air Conditioning">
-        <h3>Air Conditioning</h3>
-      </div>
-      <div class="feature">
-        <img src="images/Room/pantry.jpg" alt="Pantry Room">
-        <h3>Pantry Room</h3>
-      </div>
-      <div class="feature">
-        <img src="images/Room/Balcony.jpg" alt="Balcony">
-        <h3>Balcony</h3>
+    <section class="section section-white" id="rates">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="eyebrow">Monthly rental</p>
+          <h2>Clear, flexible monthly rates.</h2>
+          <p>Choose the room size and lease length that work for you. Rates are shown in Thai baht per month.</p>
+          <ul class="policy-list" aria-label="Room policies">
+            <li>Minimum lease: one month</li>
+            <li>Non-smoking rooms</li>
+            <li>Pets are not permitted</li>
+          </ul>
+        </div>
+        <div class="rate-panel">
+          <table class="rate-table">
+            <thead><tr><th>Room size</th><th>12-month lease</th><th>1–11 month lease</th></tr></thead>
+            <tbody>
+              <tr><td>28 m²</td><td>฿8,900 / month</td><td>฿9,500 / month</td></tr>
+              <tr><td>32 m²</td><td>฿9,500 / month</td><td>฿9,800 / month</td></tr>
+              <tr><td>35 m²</td><td>฿10,000 / month</td><td>฿10,500 / month</td></tr>
+              <tr><td>39 m²</td><td>฿11,000 / month</td><td>฿11,500 / month</td></tr>
+            </tbody>
+          </table>
+          <p class="rate-note">No monthly common-area fee.</p>
+        </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta">
-      <h2>Interested in Booking?</h2>
-      <p>Contact us today for availability and pricing details.</p>
-      <a href="contact.html" class="btn">Book / Enquire</a>
+    <section class="section">
+      <div class="shell">
+        <div class="section-heading centered">
+          <p class="eyebrow">Rooms &amp; layouts</p>
+          <h2>Comfortable spaces, thoughtfully arranged.</h2>
+          <p>Browse a selection of room and bathroom layouts. Furnishings and decorative items shown may vary by room.</p>
+        </div>
+        <div class="room-gallery">
+          <img src="images/Room/bed1.jpg" alt="Bedroom layout with bed and storage" loading="lazy">
+          <img src="images/Room/bed2.jpg" alt="Furnished NARA Residence bedroom" loading="lazy">
+          <img src="images/Room/bed3.jpg" alt="Bedroom with natural light" loading="lazy">
+          <img src="images/Room/bed4.jpg" alt="Bedroom layout and furnishings" loading="lazy">
+          <img src="images/Room/bed5.jpg" alt="Room interior at NARA Residence" loading="lazy">
+          <img src="images/Room/bed6.jpg" alt="Furnished monthly rental room" loading="lazy">
+          <img src="images/Room/bed7.jpg" alt="Bedroom and living area" loading="lazy">
+          <img src="images/Room/bed8.jpg" alt="NARA Residence room layout" loading="lazy">
+          <img src="images/Room/bath1.jpg" alt="Bathroom with glass shower screen" loading="lazy">
+          <img src="images/Room/bath2.jpg" alt="NARA Residence bathroom" loading="lazy">
+        </div>
+      </div>
     </section>
+
+    <section class="section section-white">
+      <div class="shell">
+        <div class="section-heading centered">
+          <p class="eyebrow">In-room features</p>
+          <h2>Practical details for everyday comfort.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card"><img src="images/AC.jpg" alt="Air conditioner in a NARA Residence room" loading="lazy"><div class="feature-card-copy"><h3>Air conditioning</h3><p>Each room includes air conditioning for year-round comfort.</p></div></article>
+          <article class="feature-card"><img src="images/Room/pantry.jpg" alt="Pantry area with counter and sink" loading="lazy"><div class="feature-card-copy"><h3>Pantry area</h3><p>Designed for light food preparation and microwave reheating. Stovetop cooking is not permitted.</p></div></article>
+          <article class="feature-card"><img src="images/Room/Balcony.jpg" alt="Private room balcony" loading="lazy"><div class="feature-card-copy"><h3>Balcony</h3><p>Enjoy fresh air and additional usable space from your private balcony.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section"><div class="shell cta"><h2>Come and see your next home.</h2><p>Message us on LINE to check availability or arrange a viewing. Please book your visit in advance.</p><div class="actions"><a class="button button-primary" href="https://page.line.me/nara24" target="_blank" rel="noopener">Chat on LINE</a><a class="button button-secondary" href="contact.html">Contact &amp; Directions</a></div></div></section>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 NARA Residence | 
-      <a href="contact.html">Contact Us</a> |
-      <a href="index.html">Home</a>  | 
-      <a href="facilities.html">Facilities</a>  |
-      <a href="security.html">Security</a>
-    </p>
-  </footer>
-
+  <footer class="site-footer"><div class="shell footer-inner"><div><div class="footer-brand">NARA Residence</div><p class="footer-copy">© <span data-current-year>2026</span> NARA Residence, Udom Suk, Bangkok.</p></div><nav class="footer-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="facilities.html">Facilities</a><a href="security.html">Safety</a><a href="contact.html">Contact</a></nav></div></footer>
 </body>
 </html>
