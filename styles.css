@@ -991,13 +991,15 @@ h3 {
   }
 
   .brand {
+    --logo-size: clamp(109px, 31.2vw, 140px);
     min-width: 0;
     gap: 0;
+    transform: translateX(calc(var(--logo-size) * -0.075));
   }
 
   .brand img {
-    width: clamp(109px, 31.2vw, 140px);
-    height: clamp(109px, 31.2vw, 140px);
+    width: var(--logo-size);
+    height: var(--logo-size);
   }
 
   .brand-name {
